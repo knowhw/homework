@@ -21,7 +21,7 @@ class Library:
 			
 			time.sleep(.1)
 			print (end=".",  flush=1)
-		console("echo '%s' >> books.txt" % ",".join(data)+"\n")
+		console("touch books.txt && echo '%s' >> books.txt" % ",".join(data)+"\n")
 		console("clear")
 		
 		return True
@@ -53,7 +53,7 @@ class Library:
 
 	def add_book(self):
 		
-		self.booklist()
+		# self.booklist()
 		
 		return self.save([ input( item )  for item in self.xyz ])
 		
@@ -62,18 +62,18 @@ class Library:
 		
 	def remove_book(self):
 		string=[]
-		append=strinf.append
+		append=string.append
 		_title = input("Book Title: ").lower()
 		
-		
-		books = open("books.txt", mode="r").read().splitlines()
+		test = open("books.txt", mode="r").read().splitlines()
+		books = test if test else []
 		count = len([ item for item in books if _title in item.split(",") [0]  ])
 		# test,test,1234,100
 		
 		
 			
 		for index, (title, 
-	author, date, pages) in enumerate([ item.split(",") for item in books ]):
+	author, date, pages) in enumerate([ item.split(",") for item in books if item]):
 			
 		
 			
@@ -98,9 +98,10 @@ class Library:
 	
 
 
-while 1:
-	menu="""
-	
+	def main(self):
+		while 1:
+			menu="""
+			
 Main Menu
 ---------------
 
@@ -110,42 +111,51 @@ Main Menu
  q. Exit
 """ 
 
-	# menu = "-" * max([ len(item) for item in menu.splitlines() ])
-	
-	lib = Library()
-	
-	
-	
-	case = input("%s\nEnter a choice (1-3):" % menu)
-	
-		
-		 
-	while 2:
-		
-		
-		if case == "1" : 
+
 			
-			res = lib.add_book()
-			if res:
-				break
-		elif case == "3" : 
-		
-			lib.booklist()
-			break
+			lib = Library()
 			
-		elif case == "2" : 
 			
-			lib.remove_book()
-			break
-		else:
-			if case == "q": 
-				sys.exit(1)
-			else:
-				console("clear")
-				break
-		
-		
-		
+			
+			case = input("%s\nEnter a choice (1-3):" % menu)
+			
+				
+				 
+			while 2:
+				
+				
+				if case == "1" : 
+					
+					res = lib.add_book()
+					if res:
+						break
+				elif case == "3" : 
+				
+					lib.booklist()
+					break
+					
+				elif case == "2" : 
+					
+					lib.remove_book()
+					break
+				else:
+					if case == "q": 
+						sys.exit(1)
+					else:
+						console("clear")
+						break
+				
+				
+			
+
+
+
+
+
+
+
+
+
 
 	
 	
