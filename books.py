@@ -7,7 +7,7 @@ class Library:
 	
 	def __init__(self):
 		
-		self.xyz = "Title: ", "Book Author: ", "Published date: ", "Pages: "
+		self.__ = "Title: ", "Book Author: ", "Published date: ", "Pages: "
 		# title, author, date, pages
 		
 		
@@ -55,7 +55,7 @@ class Library:
 		
 		# self.booklist()
 		
-		return self.save([ input( item )  for item in self.xyz ])
+		return self.save([ input( item )  for item in self.__ ])
 		
 	
 	
