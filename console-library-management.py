@@ -111,17 +111,11 @@ Main Menu
  q. Exit
 """ 
 
-
-			
 			lib = Library()
-			
-			
 			
 			case = input("%s\nEnter a choice (1-3):" % menu)
 			
-				
-				 
-			while 2:
+			while .8:
 				
 				
 				if case == "1" : 
