@@ -1,4 +1,5 @@
 
+
 class Library:
 	def __init__(self):
 		self.books = open("books.txt", "a+")
@@ -11,7 +12,7 @@ class Library:
 		
 		with self.books as string:
 			string.write("%s,%s,%s,%s\n" % (title, author, published, pages))
-			
+			# yeni kayit ve son satira bir bos satir ekle
 			
 		while count:
 			
@@ -38,14 +39,14 @@ class Library:
 		string = string.strip()
 		# alt satirdaki bos satirlari sil
 		with open("books.txt", "w") as file: file.write( "%s\n" % string )
-		
+		# son satira bir bos satir ekle
 	def remove_book(self, inputext):
 		string=''
 		# main -> input: title
 		
 		
 		arr = [ [item] for item in self.books.read().splitlines() if item ]
-		
+		# son satirdaki bos satirlari listeye alma
 		for index, line in enumerate(arr):
 			
 			title, author, published, pages = line [0].split(chr(44)) 
@@ -55,6 +56,7 @@ class Library:
 		
 		for line in arr : 
 			if line:
+				# bos satirlari atla
 				string += '%s\n' % ''.join(line)
 				
 		self.save(string)

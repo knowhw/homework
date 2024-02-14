@@ -5,3 +5,4 @@ R ve Python Uygulamalari,Zeki Ozen,2023,408
 Yaratici Drama Bibliyografyasi,Zeki Ozen,2014,104
 isletme Enformatigine Giris,Zeki Ozen,2019,188
 test,Anonim,1995,100
+deneme,Anonim,1995,100
