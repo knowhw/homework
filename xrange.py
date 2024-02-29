@@ -1,12 +1,5 @@
 
 
-
-__python__ = "2.7+"
-__school__ = "istanbul.edu.tr"
-__github__ = "@knowhw"
-
-
-
 class get:
 	class item:
 		def array(
